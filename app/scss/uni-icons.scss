@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'uni-icons';
-    src: url('fonts/uni-icons.eot?aeod0t');
-    src: url('fonts/uni-icons.eot?aeod0t#iefix') format('embedded-opentype'),
-        url('fonts/uni-icons.ttf?aeod0t') format('truetype'),
-        url('fonts/uni-icons.woff?aeod0t') format('woff'),
-        url('fonts/uni-icons.svg?aeod0t#uni-icons') format('svg');
+    src: url('../fonts/uni-icons.eot');
+    src: url('../fonts/uni-icons.eot') format('embedded-opentype'),
+        // url('../fonts/uni-icons.ttf') format('truetype'),
+        url('../fonts/uni-icons.woff') format('woff'),
+        url('../fonts/uni-icons.svg') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -72,6 +72,7 @@
 .icon-search:before {
     content: '\e90a';
     color: #a7a7a7;
+    font-size: 20px;
 }
 .icon-sign-in:before {
     content: '\e90b';
