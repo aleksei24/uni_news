@@ -5,21 +5,27 @@
     width: 100%;
     z-index: 10;
     transition: all 0.8s ease;
-    &__container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        @media (max-width: $md2) {
-            padding-top: 15px;
-            padding-bottom: 15px;
-        }
+    &__top {
+        border-bottom: 1px solid #d9dadb;
     }
 
-    &__logo {
-        display: inline-block;
-        font-size: 0;
+    &__headline {
+        @include response-font(14, 10);
+        line-height: 20/14 * 100%;
+        margin: 0 25px 0 15px;
+    }
+
+    &__btn {
+        margin-right: 10px;
+    }
+
+    &__bottom {
+    }
+
+    &__nav {
+        background-color: #262d33;
+        padding: 17px 0;
+        margin-top: -4px;
     }
 
     &_fixed {
@@ -30,5 +36,145 @@
         width: 100%;
         z-index: 10;
         background-color: $headerFixed;
+    }
+}
+.top-header {
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 15px;
+        padding-bottom: 0;
+    }
+
+    &__sections {
+        display: flex;
+        align-items: center;
+        width: 120px;
+        border-right: 1px solid #d9dadb;
+    }
+
+    &__search {
+        display: flex;
+        width: 100%;
+    }
+
+    &__subscribe {
+        display: flex;
+        align-items: center;
+        min-width: 155px;
+    }
+
+    &__sign {
+        display: flex;
+        align-items: center;
+        min-width: 90px;
+        margin-left: 25px;
+    }
+}
+.search-header {
+    &__input {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 25px;
+        width: 100%;
+    }
+}
+.btn {
+    &_search {
+    }
+}
+.subscribe-header {
+    &__img {
+    }
+
+    &__offer {
+        margin-left: 10px;
+    }
+
+    &__headline {
+        @include response-font(12, 8);
+        line-height: 15/12 * 100%;
+    }
+
+    &__text {
+        @include response-font(12, 8);
+        line-height: 15/12 * 100%;
+    }
+}
+.sign-header {
+    &__span {
+        margin: 0 5px;
+    }
+}
+.bottom-header {
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__column {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 300px;
+    }
+
+    &__img {
+    }
+
+    &__place {
+        span {
+            @include response-font(14, 9);
+            line-height: 20/14 * 100%;
+            color: #4b5157;
+        }
+    }
+
+    &__logo {
+    }
+
+    &__date {
+    }
+
+    &__weather {
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+.date-header {
+    &__span {
+        @include response-font(14, 9);
+        line-height: 20/14 * 100%;
+        color: #4b5157;
+    }
+}
+.weather-header {
+    &__span {
+        @include response-font(14, 9);
+        line-height: 20/14 * 100%;
+        color: #4b5157;
+        margin: 0 5px;
+    }
+}
+
+.nav {
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item {
+    }
+
+    &__link {
+        text-transform: uppercase;
+        @include response-font(14, 10);
+        line-height: 20/14 * 100%;
+        color: $menuLink;
     }
 }

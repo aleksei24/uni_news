@@ -17,16 +17,6 @@ $catalogSliderWidth: 1300px;
 $bgColour: #ffffff;
 $bannerHeadline: #fff;
 $menuLink: #fff;
-$foodTitle: #3bbdc4;
-$carsTitle: #6e99ae;
-$moviesTitle: #ac8ee3;
-$nflTitle: #ffa34d;
-$techTitle: #3dc47e;
-$flightsTitle: #4592ff;
-$scienceTitle: #ff4f52;
-$healthTitle: #3bbdc4;
-$artTitle: #ac8ee3;
-$careersTitle: #6e99ae;
 $amountColour: #939699;
 $dateColour: #939699;
 $btnColour: #ffffff;
@@ -65,7 +55,7 @@ body {
     margin: 0;
     list-style-type: none;
     text-decoration: none;
-    outline: 1px solid red;
+    // outline: 1px solid red;
 }
 a {
     text-decoration: none;
@@ -139,6 +129,36 @@ button {
 .text {
     color: #4b5157;
     font-family: $fontFamily;
+}
+.foodTitle {
+    background-color: #3bbdc4;
+}
+.carsTitle {
+    background-color: #6e99ae;
+}
+.moviesTitle {
+    background-color: #ac8ee3;
+}
+.nflTitle {
+    background-color: #ffa34d;
+}
+.techTitle {
+    background-color: #3dc47e;
+}
+.flightsTitle {
+    background-color: #4592ff;
+}
+.scienceTitle {
+    background-color: #ff4f52;
+}
+.healthTitle {
+    background-color: #3bbdc4;
+}
+.artTitle {
+    background-color: #ac8ee3;
+}
+.careersTitle {
+    background-color: #6e99ae;
 }
 
 .ibg {
