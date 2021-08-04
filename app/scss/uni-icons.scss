@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'uni-icons';
+    src: url('fonts/uni-icons.eot?aeod0t');
+    src: url('fonts/uni-icons.eot?aeod0t#iefix') format('embedded-opentype'),
+        url('fonts/uni-icons.ttf?aeod0t') format('truetype'),
+        url('fonts/uni-icons.woff?aeod0t') format('woff'),
+        url('fonts/uni-icons.svg?aeod0t#uni-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^='icon-']::before,
+[class*=' icon-']::before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'uni-icons' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow:before {
+    content: '\e900';
+    color: #c2c2c2;
+}
+.icon-bookmark:before {
+    content: '\e901';
+    color: #a7a7a7;
+}
+.icon-comment:before {
+    content: '\e902';
+    color: #a7a7a7;
+}
+.icon-facebook .path1:before {
+    content: '\e903';
+    color: rgb(86, 86, 86);
+}
+.icon-facebook .path2:before {
+    content: '\e904';
+    margin-left: -1em;
+    color: rgb(194, 194, 194);
+}
+.icon-heart:before {
+    content: '\e905';
+    color: #c2c2c2;
+}
+.icon-insta .path1:before {
+    content: '\e906';
+    color: rgb(32, 32, 32);
+}
+.icon-insta .path2:before {
+    content: '\e907';
+    margin-left: -1em;
+    color: rgb(194, 194, 194);
+}
+.icon-mid-play .path1:before {
+    content: '\e908';
+    color: rgb(194, 194, 194);
+    opacity: 0.4;
+}
+.icon-mid-play .path2:before {
+    content: '\e909';
+    margin-left: -1em;
+    color: rgb(194, 194, 194);
+}
+.icon-search:before {
+    content: '\e90a';
+    color: #a7a7a7;
+}
+.icon-sign-in:before {
+    content: '\e90b';
+    color: #a7a7a7;
+}
+.icon-tiny-play .path1:before {
+    content: '\e90c';
+    color: rgb(167, 167, 167);
+}
+.icon-tiny-play .path2:before {
+    content: '\e90d';
+    margin-left: -1em;
+    color: rgb(32, 32, 32);
+}
+.icon-twitter .path1:before {
+    content: '\e90e';
+    color: rgb(140, 140, 140);
+}
+.icon-twitter .path2:before {
+    content: '\e90f';
+    margin-left: -1em;
+    color: rgb(194, 194, 194);
+}
+.icon-watch:before {
+    content: '\e910';
+    color: #c2c2c2;
+}
+.icon-weather:before {
+    content: '\e911';
+    color: #a7a7a7;
+}
+.icon-youtube .path1:before {
+    content: '\e912';
+    color: rgb(113, 113, 113);
+}
+.icon-youtube .path2:before {
+    content: '\e913';
+    margin-left: -1em;
+    color: rgb(194, 194, 194);
+}
