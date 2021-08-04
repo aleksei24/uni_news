@@ -15,7 +15,6 @@ $indexSliderWidth: 1200px;
 $catalogSliderWidth: 1300px;
 
 $bgColour: #ffffff;
-$headlineColour: #262d33;
 $bannerHeadline: #fff;
 $menuLink: #fff;
 $foodTitle: #3bbdc4;
@@ -28,7 +27,6 @@ $scienceTitle: #ff4f52;
 $healthTitle: #3bbdc4;
 $artTitle: #ac8ee3;
 $careersTitle: #6e99ae;
-$textColour: #4b5157;
 $amountColour: #939699;
 $dateColour: #939699;
 $btnColour: #ffffff;
@@ -47,8 +45,6 @@ body {
     padding: 0;
     min-width: $minWidth;
     position: relative;
-    color: $colourFont;
-    // overflow-anchor: none;
 }
 body {
     font-size: 16px;
@@ -69,7 +65,7 @@ body {
     margin: 0;
     list-style-type: none;
     text-decoration: none;
-    // outline: 1px solid red;
+    outline: 1px solid red;
 }
 a {
     text-decoration: none;
@@ -108,6 +104,11 @@ button {
     color: $btnColour;
     background-color: $btnBgColour;
 }
+.btn_search {
+    background-color: $transparentColour;
+    color: $transparentColour;
+    font-size: 0;
+}
 .wrapper {
     width: 100%;
     min-height: 100vh;
@@ -118,6 +119,7 @@ button {
 }
 .wrapper-grid {
     min-height: 100%;
+    display: -ms-grid;
     display: grid;
     grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
     grid-template-areas: 'header-grid' 'main-grid' 'footer-grid';
@@ -128,6 +130,15 @@ button {
     height: auto;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.headline {
+    color: #262d33;
+    font-family: $secondFont;
+}
+.text {
+    color: #4b5157;
+    font-family: $fontFamily;
 }
 
 .ibg {
