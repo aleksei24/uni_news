@@ -73,11 +73,17 @@
     content: '\e90a';
     color: #bcbfc2;
     font-size: 20px;
+    @media (max-width: 600px) {
+        font-size: 16px;
+    }
 }
 .icon-sign-in:before {
     content: '\e90b';
     color: #bcbfc2;
     font-size: 20px;
+    @media (max-width: 600px) {
+        font-size: 16px;
+    }
 }
 .icon-tiny-play .path1:before {
     content: '\e90c';
@@ -105,6 +111,9 @@
     content: '\e911';
     color: #bcbfc2;
     font-size: 20px;
+    @media (max-width: 480px) {
+        font-size: 16px;
+    }
 }
 .icon-youtube .path1:before {
     content: '\e912';

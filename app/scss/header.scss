@@ -13,6 +13,9 @@
         @include response-font(14, 10);
         line-height: 20/14 * 100%;
         margin: 0 25px 0 15px;
+        @media (max-width: 600px) {
+            margin: 0 4px 0 15px;
+        }
     }
 
     &__btn {
@@ -26,6 +29,9 @@
         background-color: #262d33;
         padding: 17px 0;
         margin-top: -4px;
+        @media (max-width: 600px) {
+            display: none;
+        }
     }
 
     &_fixed {
@@ -45,6 +51,12 @@
         justify-content: space-between;
         padding-top: 15px;
         padding-bottom: 0;
+        @media (max-width: 600px) {
+            margin-bottom: -4px;
+        }
+        @media (max-width: 500px) {
+            margin-bottom: 0px;
+        }
     }
 
     &__sections {
@@ -52,17 +64,29 @@
         align-items: center;
         width: 120px;
         border-right: 1px solid #d9dadb;
+        @media (max-width: 600px) {
+            width: 80px;
+        }
     }
 
     &__search {
         display: flex;
         width: 100%;
+        @media (max-width: $md5) {
+            width: 45%;
+        }
     }
 
     &__subscribe {
         display: flex;
         align-items: center;
         min-width: 155px;
+        @media (max-width: 600px) {
+            min-width: 130px;
+        }
+        @media (max-width: 500px) {
+            min-width: 50px;
+        }
     }
 
     &__sign {
@@ -70,6 +94,13 @@
         align-items: center;
         min-width: 90px;
         margin-left: 25px;
+        @media (max-width: 600px) {
+            margin-left: 15px;
+            min-width: 75px;
+        }
+        @media (max-width: 500px) {
+            min-width: 40px;
+        }
     }
 }
 .search-header {
@@ -79,6 +110,13 @@
         justify-content: flex-start;
         padding: 0 25px;
         width: 100%;
+        input {
+            @include response-font(14, 10);
+            line-height: 20/14 * 100%;
+        }
+        @media (max-width: 600px) {
+            padding: 0 15px;
+        }
     }
 }
 .btn {
@@ -87,10 +125,19 @@
 }
 .subscribe-header {
     &__img {
+        @media (max-width: 600px) {
+            width: 50px;
+        }
+        @media (max-width: 500px) {
+            display: none;
+        }
     }
 
     &__offer {
         margin-left: 10px;
+        @media (max-width: 600px) {
+            margin-left: 5px;
+        }
     }
 
     &__headline {
@@ -101,11 +148,19 @@
     &__text {
         @include response-font(12, 8);
         line-height: 15/12 * 100%;
+        @media (max-width: 500px) {
+            display: none;
+        }
     }
 }
 .sign-header {
     &__span {
         margin: 0 5px;
+        @include response-font(14, 0);
+        @media (max-width: 500px) {
+            margin: 0 2px;
+            color: $transparentColour;
+        }
     }
 }
 .bottom-header {
@@ -120,12 +175,39 @@
         align-items: center;
         justify-content: space-between;
         min-width: 300px;
+        &:nth-child(1) {
+            @media (max-width: $md5) {
+                min-width: 80px;
+            }
+        }
+        @media (max-width: $md2) {
+            min-width: 250px;
+        }
+        @media (max-width: 600px) {
+            min-width: 150px;
+        }
+        @media (max-width: $md4) {
+            min-width: 130px;
+        }
     }
 
     &__img {
+        @media (max-width: $md2) {
+            width: 80px;
+        }
+        @media (max-width: 600px) {
+            width: 60px;
+        }
+        @media (max-width: $md4) {
+            display: none;
+        }
     }
 
     &__place {
+        @media (max-width: 600px) {
+            width: 80px;
+            text-align: center;
+        }
         span {
             @include response-font(14, 9);
             line-height: 20/14 * 100%;
@@ -134,30 +216,52 @@
     }
 
     &__logo {
+        @media (max-width: $md2) {
+            width: 120px;
+        }
+        @media (max-width: $md4) {
+            min-width: 100px;
+        }
+        @media (max-width: $md5) {
+            min-width: 80px;
+        }
     }
 
     &__date {
+        @media (max-width: 600px) {
+            width: 75px;
+            text-align: center;
+        }
+        @media (max-width: $md4) {
+            width: 65px;
+        }
     }
 
     &__weather {
         display: flex;
         align-items: flex-start;
+        @media (max-width: $md4) {
+            margin-left: 5px;
+        }
     }
 }
 
 .date-header {
     &__span {
-        @include response-font(14, 9);
-        line-height: 20/14 * 100%;
+        @include response-font(14, 8);
+        line-height: 16/14 * 100%;
         color: #4b5157;
     }
 }
 .weather-header {
     &__span {
-        @include response-font(14, 9);
+        @include response-font(14, 7);
         line-height: 20/14 * 100%;
         color: #4b5157;
         margin: 0 5px;
+        @media (max-width: $md4) {
+            margin: 0 2px;
+        }
     }
 }
 

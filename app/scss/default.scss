@@ -3,7 +3,7 @@ $secondFont: 'Lato-Bold';
 $thirdFont: 'Roboto-Bold';
 
 $maxWidth: 1366px;
-$minWidth: 200px;
+$minWidth: 320px;
 $contWidth: 1170px;
 $md1: $contWidth;
 $md2: 992px;
@@ -24,7 +24,7 @@ $btnBgColour: #4592ff;
 $headerFixed: rgba(216, 216, 216, 0.7);
 $asideBG: #6e99ae;
 $transparentColour: transparent;
-$burger: #c5cab3;
+$burger: #262d33;
 $error: red;
 
 html,
@@ -55,7 +55,7 @@ body {
     margin: 0;
     list-style-type: none;
     text-decoration: none;
-    // outline: 1px solid red;
+    outline: 1px solid red;
 }
 a {
     text-decoration: none;
