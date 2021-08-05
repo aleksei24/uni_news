@@ -1,56 +1,59 @@
 <header class="header">
     <div class="header__top top-header">
         <div class="top-header__container container">
-            <div class="top-header__sections">
-                @@include('../template/_burger.html')
-                <h3 class="header__headline headline">Sections</h3>
-            </div>
-            <div class="top-header__search search-header">
-                <div class="search-header__input">
-                    <button class="header__btn btn btn_search icon-search">click</button>
-                    <input type="search" name="search" id="search" placeholder="Search" />
+            <div class="top-header__column column-top column-top_search">
+                <div class="column-top__sections">
+                    @@include('../template/_burger.html')
+                    <h3 class="column-top__headline headline">Sections</h3>
+                </div>
+                <div class="column-top__search search-header">
+                    <div class="search-header__input">
+                        <button class="header__btn btn btn_search icon-search">click</button>
+                        <input type="search" name="search" id="search" placeholder="Search" />
+                    </div>
                 </div>
             </div>
-            <div class="top-header__subscribe subscribe-header">
-                <div class="subscribe-header__img">
-                    <img src="img/header/stories.png" alt="stories" />
+            <div class="top-header__column column-top">
+                <div class="column-top__subscribe subscribe-header">
+                    <div class="subscribe-header__img">
+                        <img src="img/header/stories.png" alt="stories" />
+                    </div>
+                    <div class="subscribe-header__offer">
+                        <a href="#!">
+                            <h4 class="subscribe-header__headline headline">Subscribe Now</h4>
+                            <p class="subscribe-header__text text">3 month for $19</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="subscribe-header__offer">
+                <div class="column-top__sign sign-header">
                     <a href="#!">
-                        <h4 class="subscribe-header__headline headline">Subscribe Now</h4>
-                        <p class="subscribe-header__text text">3 month for $19</p>
+                        <span class="sign-header__span icon-sign-in"></span>
+                        <span class="sign-header__span">Sign In</span>
                     </a>
                 </div>
-            </div>
-            <div class="top-header__sign sign-header">
-                <a href="#!">
-                    <span class="sign-header__span icon-sign-in"></span>
-                    <span class="sign-header__span">Sign In</span>
-                </a>
             </div>
         </div>
     </div>
     <div class="header__bottom bottom-header">
         <div class="bottom-header__container container">
-            <div class="bottom-header__column">
-                <div class="bottom-header__img">
+            <div class="bottom-header__column column-bottom">
+                <div class="column-bottom__img">
                     <img src="img/logo/logo-pic.png" alt="statue" />
                 </div>
-                <div class="bottom-header__place">
+                <div class="column-bottom__place">
                     <span>Boston and New York Bear Brunt</span>
                 </div>
             </div>
-
-            <div class="bottom-header__logo logo">
-                <a href="#!">
+            <div class="bottom-header__column column-bottom bottom-header__column_logo">
+                <a href="#!" class="column-bottom__logo logo">
                     <img src="img/logo/logo.png" alt="logo" />
                 </a>
             </div>
-            <div class="bottom-header__column">
-                <div class="bottom-header__date date-header">
+            <div class="bottom-header__column column-bottom">
+                <div class="column-bottom__date date-header">
                     <span class="date-header__span">Monday, January 1, 2018</span>
                 </div>
-                <div class="bottom-header__weather weather-header">
+                <div class="column-bottom__weather weather-header">
                     <span class="weather-header__span icon-weather"></span>
                     <span class="weather-header__span">- 23 °C</span>
                 </div>
