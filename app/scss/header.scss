@@ -1,0 +1,164 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    &__top {
+    }
+
+    &__btn {
+        margin-right: 10px;
+    }
+
+    &__bottom {
+    }
+
+    &__nav {
+    }
+}
+.top-header {
+    &__container {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #d9dadb;
+    }
+
+    &__column {
+        flex: 0 1 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: -10px;
+    }
+}
+.column-top {
+    &_search {
+    }
+
+    &__sections {
+        display: flex;
+        align-items: center;
+        border-right: 1px solid #d9dadb;
+        flex: 0 1 115px;
+    }
+
+    &__headline {
+        margin-left: 15px;
+    }
+
+    &__search {
+        padding: 0 25px;
+        width: 680px;
+    }
+
+    &__subscribe {
+        display: flex;
+        align-items: center;
+    }
+
+    &__sign {
+        display: flex;
+        align-items: center;
+        margin-left: 25px;
+    }
+}
+.headline {
+}
+.search-header {
+    &__input {
+        display: flex;
+        align-items: center;
+        input {
+            @include response-font(14, 9);
+            line-height: 20/14 * 100%;
+            width: 100%;
+        }
+    }
+}
+.btn {
+    &_search {
+    }
+}
+.icon-search {
+}
+.subscribe-header {
+    &__img {
+        margin-right: 10px;
+    }
+
+    &__offer {
+        min-width: 120px;
+    }
+
+    &__headline {
+        @include response-font(14, 9);
+        line-height: 20/14 * 100%;
+        color: #262d33;
+    }
+
+    &__text {
+        @include response-font(14, 9);
+        line-height: 20/14 * 100%;
+        color: #939699;
+    }
+}
+.text {
+}
+.sign-header {
+    &__span {
+        margin: 0 5px;
+        color: #4b5157;
+        @include response-font(14, 9);
+        line-height: 20/14 * 100%;
+    }
+}
+.icon-sign-in {
+}
+.bottom-header {
+    &__container {
+    }
+
+    &__column {
+        &_logo {
+        }
+    }
+}
+.column-bottom {
+    &__img {
+    }
+
+    &__place {
+    }
+
+    &__logo {
+    }
+
+    &__date {
+    }
+
+    &__weather {
+    }
+}
+.logo {
+}
+.date-header {
+    &__span {
+    }
+}
+.weather-header {
+    &__span {
+    }
+}
+.icon-weather {
+}
+.nav {
+    &__list {
+    }
+
+    &__item {
+    }
+
+    &__link {
+    }
+}
