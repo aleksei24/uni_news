@@ -4,14 +4,9 @@
     top: 0;
     left: 0;
     right: 0;
-    &__top {
-    }
 
     &__btn {
         margin-right: 10px;
-    }
-
-    &__bottom {
     }
 
     &__nav {
@@ -98,10 +93,6 @@
         }
     }
 }
-.btn {
-    &_search {
-    }
-}
 .icon-search::before {
     @include response-font(20, 12);
 }
@@ -150,40 +141,126 @@
 }
 .bottom-header {
     &__container {
+        height: 84px;
+        display: flex;
+        align-items: center;
+        @media (max-width: $md4) {
+            flex-direction: column;
+        }
     }
 
     &__column {
+        flex: 0 1 50%;
+        display: flex;
+        align-items: center;
+        &:last-child {
+            justify-content: flex-end;
+            @media (max-width: $md4) {
+                justify-content: space-between;
+            }
+        }
+        @media (max-width: $md4) {
+            flex: 0 1 100%;
+        }
         &_logo {
+            flex: 0 0 184px;
+            @media (max-width: $md2) {
+                flex: 0 0 160px;
+            }
+            @media (max-width: $md3) {
+                flex: 0 0 150px;
+                margin: 0 10px;
+            }
+            @media (max-width: $md4) {
+                flex: 0 0 auto;
+            }
         }
     }
 }
 .column-bottom {
     &__img {
+        margin-left: 26px;
+        @media (max-width: $md2) {
+            margin-left: 15px;
+            width: 80px;
+        }
+        @media (max-width: 600px) {
+            display: none;
+            margin-left: 0;
+        }
     }
 
     &__place {
-    }
-
-    &__logo {
+        margin-left: 15px;
+        span {
+            @include response-font(14, 9);
+            line-height: 20/14 * 100%;
+            color: #4b5157;
+        }
+        @media (max-width: $md2) {
+            width: 110px;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            margin-left: 10px;
+        }
+        @media (max-width: $md4) {
+            width: 100%;
+            margin-left: 0;
+        }
     }
 
     &__date {
+        width: 195px;
+        @media (max-width: $md2) {
+            width: 150px;
+        }
+        @media (max-width: $md3) {
+            width: 110px;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            width: 80px;
+        }
+        @media (max-width: $md4) {
+            flex: 0 1 50%;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     &__weather {
+        margin-left: 23px;
+        min-width: 55px;
+        @media (max-width: 600px) {
+            margin-left: 15px;
+            min-width: 40px;
+            white-space: nowrap;
+        }
+        @media (max-width: $md4) {
+            flex: 0 1 50%;
+        }
     }
 }
-.logo {
-}
+
 .date-header {
     &__span {
+        @include response-font(14, 9);
+        line-height: 20/14 * 100%;
+        color: #4b5157;
     }
 }
 .weather-header {
     &__span {
+        @include response-font(14, 9);
+        line-height: 20/14 * 100%;
+        color: #4b5157;
     }
 }
-.icon-weather {
+.icon-weather::before {
+    @include response-font(14, 9);
 }
 .nav {
     &__list {

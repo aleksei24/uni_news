@@ -102,10 +102,6 @@
 .icon-weather:before {
     content: '\e911';
     color: #bcbfc2;
-    font-size: 20px;
-    @media (max-width: 480px) {
-        font-size: 16px;
-    }
 }
 .icon-youtube .path1:before {
     content: '\e912';
