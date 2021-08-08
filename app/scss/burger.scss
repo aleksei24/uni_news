@@ -67,7 +67,7 @@
     }
     .menu-burger__list.active {
         left: -135%;
-        @media (max-width: 600px) {
+        @media (max-width: $md3) {
             left: 0;
         }
         // background-color: rgba(110, 108, 109, 0.9);
@@ -78,7 +78,7 @@
     .list-burger__link {
         font-family: $secondFont;
         color: $menuLink;
-        @include response-font(16, 12);
+        @include response-font(16, 14);
         line-height: 20/16 * 100%;
         text-transform: uppercase;
     }
