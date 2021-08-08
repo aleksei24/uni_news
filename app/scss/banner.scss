@@ -3,7 +3,7 @@
     border-radius: 10px;
     &__container {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
         padding: 35px 0;
         @media (max-width: $md2) {
@@ -16,8 +16,11 @@
 
     &__card {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         padding: 0 25px;
+        padding-bottom: 5px;
+        max-height: 300px;
+        overflow: auto;
         &:not(:last-child) {
             border-right: 1px solid #4b5157;
         }
