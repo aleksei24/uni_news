@@ -25,6 +25,7 @@ $headerFixed: rgba(216, 216, 216, 0.7);
 $asideBG: #6e99ae;
 $transparentColour: transparent;
 $menuBg: #262d33;
+$bannerBg: #30363d;
 $burger: #262d33;
 $error: red;
 
@@ -121,6 +122,13 @@ button {
     height: auto;
     margin: 0 auto;
     padding: 0 15px;
+}
+.main {
+    margin-top: 220px;
+    flex: 1 1 auto;
+    @media (max-width: $md3) {
+        margin-top: 160px;
+    }
 }
 
 .headline {

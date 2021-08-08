@@ -11,7 +11,7 @@
 
     &__nav {
         background-color: $menuBg;
-        padding: 18px 0;
+        padding: 18px 0 475px;
         @media (max-width: $md3) {
             display: none;
         }
@@ -84,8 +84,6 @@
         }
     }
 }
-.headline {
-}
 .search-header {
     &__input {
         display: flex;
@@ -127,8 +125,6 @@
         line-height: 20/14 * 100%;
         color: #939699;
     }
-}
-.text {
 }
 .sign-header {
     &__span {
@@ -272,9 +268,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-    }
-
-    &__item {
     }
 
     &__link {
