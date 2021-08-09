@@ -3,35 +3,32 @@
 }
 .pure-tabs {
     overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
     &__top {
         display: flex;
-        align-items: flex-end;
-        flex-wrap: wrap;
+        flex-direction: column;
+        background-color: $bgColour;
+        flex: 0 0 265px;
     }
 
     &__caption {
         flex: 1;
-        padding: 8px 30px;
-        text-align: center;
-        text-transform: uppercase;
-        user-select: none;
+        padding: 17px 25px;
         cursor: pointer;
-        color: red;
-        opacity: 0.6;
-        background-color: lightblue;
         transition: 0.3s;
         &:hover {
-            opacity: 0.8;
+            background-color: rgb(228, 228, 228);
         }
         &_active {
-            background-color: lightblue;
-            opacity: 1;
+            background-color: rgb(228, 228, 228);
         }
     }
 
     &__body {
+        flex: 1 1 auto;
         position: relative;
-        top: -2px;
         background-color: lightblue;
         transition: 0.3s;
     }
