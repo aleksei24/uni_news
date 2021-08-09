@@ -1,3 +1,12 @@
+.recommend {
+    margin: 30px 0;
+    &__container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
+
 .vertical-tabs {
     display: flex;
     flex-direction: column;
@@ -17,13 +26,8 @@
 }
 .vertical-tabs li {
     display: inline-block;
-    margin: 15px 0;
-    padding: 0 5px;
-    height: 26px;
-    line-height: 26px;
-    @media (max-width: $md3) {
-        margin: 10px 0;
-    }
+    padding: 17px 25px;
+    height: 99px;
 }
 .vertical-tabs li span {
     display: inline-block;
@@ -34,8 +38,7 @@
     text-transform: uppercase;
 }
 .vertical-tabs .active {
-    background: $priceOld;
-    border-radius: 5px;
+    background: gray;
 }
 .vertical-tabs .active span {
     color: $bgColour;
