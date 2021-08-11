@@ -29,26 +29,39 @@
     &__body {
         flex: 1 1 auto;
         position: relative;
-        background-color: lightblue;
         transition: 0.3s;
     }
 
     &__content {
         display: none;
-        padding: 30px;
+        padding: 0px;
         color: black;
-        transform: scaleY(0.8);
+        transform: scaleY(0.4);
         opacity: 0;
         transform-origin: center top;
-        animation: showContent 0.6s forwards;
+        animation: showContent 0.3s forwards;
         &_active {
             display: block;
         }
     }
+
+    &__img {
+        position: relative;
+    }
+
+    &__cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $transparentColour;
+        padding: 55px;
+    }
 }
 @-webkit-keyframes showContent {
     0% {
-        transform: scaleY(0.8);
+        transform: scaleY(0.6);
         opacity: 0;
     }
     100% {
@@ -65,4 +78,63 @@
         transform: scaleY(1);
         opacity: 1;
     }
+}
+
+.cover-tabs {
+    &__ava {
+        max-width: 180px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__img {
+    }
+
+    &__name {
+        height: auto;
+        overflow: auto;
+        h4 {
+            font-weight: 400;
+            @include response-font(14, 12);
+            line-height: 20/14 * 100%;
+            color: #fff;
+        }
+        p {
+            @include response-font(12, 10);
+            line-height: 15/12 * 100%;
+            color: rgba(255, 255, 255, 0.4);
+        }
+    }
+
+    &__description {
+        margin-top: 145px;
+        h4 {
+            font-weight: 400;
+            @include response-font(12, 10);
+            line-height: 15/12 * 100%;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+        h2 {
+            width: 600px;
+            overflow: scroll;
+            @include response-font(40, 24);
+            line-height: 50/40 * 100%;
+            color: #fff;
+            margin-bottom: 45px;
+            font-family: $thirdFont;
+        }
+    }
+
+    &__btn {
+        padding: 10px 25px;
+        border-radius: 20px;
+    }
+}
+.btn {
+    @include response-font(14, 12);
+    line-height: 20/14 * 100%;
+    color: #fff;
+    font-family: $secondFont;
 }
