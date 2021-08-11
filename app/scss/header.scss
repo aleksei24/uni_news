@@ -4,6 +4,14 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10;
+
+    &__top {
+        background-color: $bgColour;
+    }
+    &__bottom {
+        background-color: $bgColour;
+    }
 
     &__btn {
         margin-right: 10px;
@@ -11,7 +19,7 @@
 
     &__nav {
         background-color: $menuBg;
-        padding: 18px 0 475px;
+        padding: 18px 0;
         @media (max-width: $md3) {
             display: none;
         }
