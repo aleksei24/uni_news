@@ -25,9 +25,8 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow:before {
+.icon-arrow::after {
     content: '\e900';
-    color: #c2c2c2;
 }
 .icon-bookmark:before {
     content: '\e901';
