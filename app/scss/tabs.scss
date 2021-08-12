@@ -1,17 +1,31 @@
 .section {
     margin: 50px 0;
-    // background-color: $menuBg;
+    &__container {
+        @media (max-width: $md4) {
+            padding: 0 10px;
+        }
+    }
 }
 .pure-tabs {
     overflow: hidden;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
     &__top {
         display: flex;
         flex-direction: column;
         background-color: $bgColour;
         flex: 0 0 265px;
+        @media (max-width: $md2) {
+            flex: 0 0 230px;
+        }
+        @media (max-width: $md3) {
+            flex: 0 0 190px;
+        }
+        @media (max-width: $md4) {
+            flex: 0 0 120px;
+        }
     }
 
     &__caption {
@@ -21,25 +35,41 @@
         transition: 0.4s;
         position: relative;
         height: auto;
-        &:hover {
-            background-color: rgb(228, 228, 228);
+        @media (max-width: $md2) {
+            padding: 14px 20px;
         }
-        &_active {
-            background-color: rgb(228, 228, 228);
+        @media (max-width: $md4) {
+            padding: 5px 10px;
         }
+
         &_active::before {
             content: '';
             display: inline-block;
             height: 20px;
             width: 20px;
-            background-color: rgb(228, 228, 228);
+            background-color: $bgColour;
             position: absolute;
             top: 50%;
             transform: translateY(-50%) rotate(45deg);
             left: -10px;
+            @media (max-width: $md4) {
+                height: 10px;
+                width: 10px;
+                left: -4px;
+            }
+        }
+        span {
+            @include response-font(12, 10);
         }
         p {
             margin-top: 8px;
+            max-height: 40px;
+            overflow: auto;
+            @include response-font(14, 10);
+            @media (max-width: $md4) {
+                margin-top: 5px;
+                max-height: 50px;
+            }
         }
     }
 
@@ -63,6 +93,22 @@
 
     &__img {
         position: relative;
+        img {
+            height: auto;
+            @media (max-width: $contWidth) {
+                height: 535px;
+                width: 100%;
+            }
+            @media (max-width: $md2) {
+                height: 480px;
+            }
+            @media (max-width: $md4) {
+                height: 415px;
+            }
+            @media (max-width: $md5) {
+                height: 400px;
+            }
+        }
     }
 
     &__cover {
@@ -73,13 +119,29 @@
         bottom: 0;
         background-color: $transparentColour;
         padding: 55px;
+        @media (max-width: $md2) {
+            padding: 40px;
+        }
+        @media (max-width: $md4) {
+            padding: 20px;
+        }
     }
     &__headline {
         height: 60px;
         padding: 20px 25px;
-        @include response-font(14, 12);
+        @include response-font(14, 10);
         line-height: 20/14 * 100%;
         text-transform: uppercase;
+        @media (max-width: $md2) {
+            padding: 15px 20px;
+        }
+        @media (max-width: $md3) {
+            padding: 10px 15px;
+            height: auto;
+        }
+        @media (max-width: $md4) {
+            padding: 5px 10px;
+        }
     }
 }
 @-webkit-keyframes showContent {
@@ -109,6 +171,9 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        @media (max-width: $md4) {
+            max-width: 150px;
+        }
     }
 
     &__img {
@@ -119,12 +184,12 @@
         overflow: auto;
         h4 {
             font-weight: 400;
-            @include response-font(14, 12);
+            @include response-font(14, 10);
             line-height: 20/14 * 100%;
             color: #fff;
         }
         p {
-            @include response-font(12, 10);
+            @include response-font(12, 9);
             line-height: 15/12 * 100%;
             color: rgba(255, 255, 255, 0.4);
         }
@@ -132,6 +197,9 @@
 
     &__description {
         margin-top: 145px;
+        @media (max-width: $md4) {
+            margin-top: 80px;
+        }
         h4 {
             font-weight: 400;
             @include response-font(12, 10);
@@ -142,11 +210,14 @@
         h2 {
             width: 600px;
             height: auto;
-            @include response-font(40, 24);
+            @include response-font(40, 21);
             line-height: 50/40 * 100%;
             color: #fff;
             margin-bottom: 45px;
             font-family: $thirdFont;
+            @media (max-width: $md2) {
+                width: auto;
+            }
         }
     }
 
