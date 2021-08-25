@@ -10,6 +10,8 @@
 
     &__item {
         padding: 25px;
+        background-color: #fff;
+        border-radius: 10px;
     }
 }
 .item-article {
@@ -49,7 +51,7 @@
         grid-row: span 4;
     }
 }
-// item-article
+// item-article main
 .item-article {
     &__main {
         display: flex;
@@ -124,4 +126,81 @@
 }
 .icon-comment::before {
     margin-right: 5px;
+}
+
+// item-article span21
+.item-article_span21 {
+    padding: 0;
+}
+.span21__cover {
+    position: relative;
+    height: 100%;
+    img {
+        height: 100%;
+        border-radius: 10px;
+    }
+}
+.span21 {
+    &__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    &__labels {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+    }
+    &__label {
+        background-color: #3dc47e;
+        color: white;
+        @include response-font(12, 8);
+        line-height: 15/12 * 100%;
+        padding: 5px 11px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+    }
+}
+.descript-span21 {
+    &__span {
+        color: #e7d9ff;
+        @include response-font(12, 8);
+        line-height: 15/12 * 100%;
+    }
+    &__headline {
+        color: #fff;
+        text-transform: uppercase;
+        @include response-font(16, 12);
+        line-height: 25/16 * 100%;
+        margin: 10px 0 15px;
+    }
+    &__bottom {
+        display: flex;
+        align-items: flex-start;
+    }
+}
+.bottom-span21 {
+    &__img {
+        margin-right: 10px;
+    }
+    &__headline {
+        color: #fff;
+        @include response-font(14, 10);
+        line-height: 20/14 * 100%;
+        font-weight: 400;
+    }
+    &__signs {
+        span {
+            color: rgba(255, 255, 255, 0.4);
+            @include response-font(12, 8);
+            line-height: 15/12 * 100%;
+            margin-right: 10px;
+        }
+    }
 }
