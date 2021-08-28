@@ -4,7 +4,7 @@
         display: -ms-grid;
         display: grid;
         grid-template-columns: repeat(4, minmax(263px, 1fr));
-        grid-template-rows: repeat(4, minmax(170px, 1fr));
+        grid-template-rows: repeat(4, 170px);
         gap: 29px;
     }
 
@@ -26,6 +26,8 @@
         @include response-font(14, 10);
         line-height: 20/14 * 100%;
         margin-bottom: 10px;
+        max-height: 65px;
+        overflow: auto;
     }
 
     &__date {
@@ -50,6 +52,9 @@
     }
     &_aside {
         grid-row: span 4;
+        padding: 0;
+        background-color: #6e99ae;
+        color: #fff;
     }
 }
 // item-article main
@@ -64,7 +69,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        max-height: 55px;
+        max-height: 45px;
         height: 100%;
         overflow: auto;
         padding-right: 25px;
@@ -102,6 +107,7 @@
     }
 
     &__image {
+        max-width: 270px;
     }
 }
 .bottom-art {
@@ -216,11 +222,75 @@
     }
 
     &__descript {
-        padding: 10px 25px 30px;
-        @include response-font(16, 10);
-        line-height: 25/16 * 100%;
+        padding: 7px 25px;
+        @include response-font(14, 11);
+        line-height: 25/14 * 100%;
         font-family: $thirdFont;
-        max-height: 130px;
+        max-height: 75px;
         overflow: auto;
+    }
+}
+
+.aside-article {
+    padding: 18px 0 0 0;
+    &__top {
+        padding: 0 25px 20px 25px;
+        @include response-font(14, 10);
+        line-height: 20/14 * 100%;
+        font-weight: 400;
+        text-transform: uppercase;
+        border-bottom: 1px solid #b4d1e0;
+        max-height: 65px;
+        overflow: auto;
+    }
+
+    &__column {
+        padding: 0 25px 0 35px;
+    }
+
+    &__row {
+        padding: 40px 0 38px 0;
+        &:not(:last-child) {
+            border-bottom: 1px solid #b4d1e0;
+        }
+    }
+
+    &__title {
+        @include response-font(20, 16);
+        line-height: 25/20 * 100%;
+        margin-bottom: 15px;
+        max-height: 80px;
+        overflow: auto;
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        max-height: 50px;
+        overflow: auto;
+    }
+
+    &__bottom {
+        border-top: 1px solid #b4d1e0;
+        padding: 14px 95px;
+        @include response-font(14, 10);
+        line-height: 20/14 * 100%;
+    }
+}
+.author-aside {
+    &__img {
+        margin-right: 10px;
+    }
+
+    &__desript {
+        color: #d1e2eb;
+        p {
+            @include response-font(14, 10);
+            line-height: 20/14 * 100%;
+        }
+        span {
+            @include response-font(12, 8);
+            line-height: 15/12 * 100%;
+        }
     }
 }
