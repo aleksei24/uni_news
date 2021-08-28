@@ -46,6 +46,7 @@
     }
     &_span22 {
         grid-row: span 2;
+        padding: 0;
     }
     &_aside {
         grid-row: span 4;
@@ -202,5 +203,24 @@
             line-height: 15/12 * 100%;
             margin-right: 10px;
         }
+    }
+}
+
+.span22 {
+    height: auto;
+    &__img {
+        margin-bottom: 5px;
+        img {
+            border-radius: 10px 10px 0 0;
+        }
+    }
+
+    &__descript {
+        padding: 10px 25px 30px;
+        @include response-font(16, 10);
+        line-height: 25/16 * 100%;
+        font-family: $thirdFont;
+        max-height: 130px;
+        overflow: auto;
     }
 }

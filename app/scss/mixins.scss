@@ -1,4 +1,4 @@
-$maxWidth: 1366;
+$maxWidth: 1170;
 
 @mixin response-font($pcSize, $mobSize) {
     $addSize: $pcSize - $mobSize;
