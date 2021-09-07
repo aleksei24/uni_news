@@ -1,4 +1,4 @@
-$themeColor: #007aff !default;
+$themeColor: #fff !default;
 $colors: (
     'white': #ffffff,
     'black': #000000,
@@ -105,32 +105,16 @@ $colors: (
         z-index: 10;
     }
     .swiper-slide-shadow-left {
-        background-image: linear-gradient(
-            to left,
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0)
-        );
+        background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
     }
     .swiper-slide-shadow-right {
-        background-image: linear-gradient(
-            to right,
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0)
-        );
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
     }
     .swiper-slide-shadow-top {
-        background-image: linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0)
-        );
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
     }
     .swiper-slide-shadow-bottom {
-        background-image: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0)
-        );
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
     }
 }
 
@@ -232,9 +216,11 @@ $colors: (
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-container-horizontal > .swiper-pagination-bullets {
-    bottom: 10px;
-    left: 0;
-    width: 100%;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    text-align: center;
 }
 /* Bullets */
 .swiper-pagination-bullets-dynamic {
@@ -268,7 +254,7 @@ $colors: (
     height: 8px;
     display: inline-block;
     border-radius: 100%;
-    background: #000;
+    background: #d9dadb;
     opacity: 0.2;
     @at-root button#{&} {
         border: none;
@@ -309,7 +295,7 @@ $colors: (
 .swiper-container-horizontal {
     > .swiper-pagination-bullets {
         .swiper-pagination-bullet {
-            margin: 0 4px;
+            margin: 0 8px;
         }
         &.swiper-pagination-bullets-dynamic {
             left: 50%;
@@ -320,9 +306,7 @@ $colors: (
             }
         }
     }
-    &.swiper-container-rtl
-        > .swiper-pagination-bullets-dynamic
-        .swiper-pagination-bullet {
+    &.swiper-container-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
         transition: 200ms transform, 200ms right;
     }
 }
@@ -365,4 +349,8 @@ $colors: (
 }
 .swiper-pagination-lock {
     display: none;
+}
+
+.bottom-swiper {
+    overflow: hidden;
 }
