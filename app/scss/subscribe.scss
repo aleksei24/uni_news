@@ -1,0 +1,59 @@
+.subscribe {
+    max-width: $contWidth;
+    margin: 0 auto;
+    padding: 30px 0;
+
+    & * {
+        outline: none;
+    }
+
+    &__title {
+        @include response-font(40, 32);
+        line-height: 50/40 * 100%;
+        font-family: $thirdFont;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    &__item {
+        margin-bottom: 20px;
+    }
+
+    &__label {
+        font-size: 0px;
+        display: none;
+    }
+
+    &__input {
+        height: 50px;
+        padding: 0 20px;
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 100%;
+        font-size: 18px;
+        &:focus {
+            box-shadow: 0 0 10px $btnBgColour;
+        }
+        &._error {
+            box-shadow: 0 0 15px $error;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $btnBgColour;
+        color: $btnColour;
+        min-height: 50px;
+        border-radius: 10px;
+        font-size: 21px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        &:active {
+            transform: scale(1.02);
+        }
+    }
+}
