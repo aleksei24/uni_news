@@ -1,5 +1,4 @@
 .subscribe {
-    max-width: $maxWidth;
     margin: 0 auto;
     padding: 60px 0;
     background-color: $bgColourFooter;
@@ -20,6 +19,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @media (max-width: $md4) {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        @media (max-width: $md4) {
+            width: 100%;
+        }
     }
 
     &__label {
@@ -36,6 +44,11 @@
         @include response-font(14, 10);
         line-height: 20/14 * 100%;
         margin-right: 10px;
+        @media (max-width: $md4) {
+            margin-right: 0;
+            margin-bottom: 20px;
+            width: 100%;
+        }
         &:focus {
             box-shadow: 0 0 10px $btnBgColour;
         }
@@ -57,6 +70,9 @@
         line-height: 20/14 * 100%;
         cursor: pointer;
         transition: background-color 0.2s ease;
+        @media (max-width: $md4) {
+            width: 100%;
+        }
         &:active {
             transform: scale(1.02);
         }
