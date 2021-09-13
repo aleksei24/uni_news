@@ -4,6 +4,7 @@ const indexSwiper = new Swiper('.bottom-swiper', {
     direction: 'horizontal',
     loop: true,
     speed: 1000,
+    slidesPerView: 1,
 
     // Navigation arrows
     /*navigation: {
