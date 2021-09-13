@@ -7,16 +7,34 @@
     }
 
     &__main {
-        flex: 0 0 848px;
+        flex: 1 1 848px;
         padding: 25px;
         background-color: #fff;
         border-radius: 10px;
+        margin-right: 30px;
+        @media (max-width: $md2) {
+            margin-right: 20px;
+            padding: 15px;
+        }
+        @media (max-width: $md3) {
+            flex: 1 1 100%;
+            margin-right: 0;
+        }
+        @media (max-width: $md4) {
+            padding: 10px;
+        }
     }
 
     &__aside {
         flex: 0 0 263px;
         background-color: #fff;
         border-radius: 10px;
+        @media (max-width: $md2) {
+            flex: 0 0 220px;
+        }
+        @media (max-width: $md3) {
+            display: none;
+        }
     }
 }
 .main-colArt {
@@ -29,9 +47,16 @@
     &__img {
         flex: 1 0 335px;
         margin-right: 25px;
-    }
-
-    &__descript {
+        @media (max-width: $md2) {
+            margin-right: 20px;
+            flex: 1 0 275px;
+        }
+        @media (max-width: $md3) {
+            flex: 1 0 250px;
+        }
+        @media (max-width: 600px) {
+            display: none;
+        }
     }
 }
 .descript-colArt {
@@ -47,20 +72,27 @@
     }
 
     &__main {
-        margin: 15px 0 20px 0;
+        margin: 15px 0;
+        @media (max-width: $md2) {
+            margin: 10px 0;
+        }
+
         h3 {
             @include response-font(20, 14);
             line-height: 25/20 * 100%;
             font-family: $thirdFont;
             margin-bottom: 10px;
-            max-height: 63px;
+            max-height: 64px;
             overflow: auto;
         }
         p {
             @include response-font(14, 10);
             line-height: 20/14 * 100%;
-            max-height: 63px;
+            max-height: 75px;
             overflow: auto;
+            @media (max-width: 600px) {
+                max-height: 85px;
+            }
         }
     }
 
@@ -100,9 +132,10 @@
 }
 .aside-colArt {
     &__top {
+        text-align: center;
         max-height: 60px;
         height: 100%;
-        padding: 20px 25px;
+        padding: 20px;
         border-bottom: 1px solid #d9dadb;
         h4 {
             @include response-font(14, 10);
@@ -114,6 +147,9 @@
 
     &__main {
         padding: 0 25px;
+        @media (max-width: $md2) {
+            padding: 0 15px;
+        }
     }
 
     &__item {
@@ -135,7 +171,7 @@
             line-height: 20/14 * 100%;
             margin-bottom: 1px;
             color: #4b5157;
-            max-height: 42px;
+            max-height: 46px;
             overflow: auto;
         }
         span {
@@ -146,9 +182,10 @@
     }
 
     &__bottom {
+        text-align: center;
         max-height: 45px;
         height: 100%;
-        padding: 14px 95px;
+        padding: 14px;
         border-top: 1px solid #d9dadb;
         h5 {
             @include response-font(14, 10);
