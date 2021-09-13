@@ -8,7 +8,7 @@
         gap: 29px;
         @media (max-width: $md1) {
             gap: 20px;
-            grid-template-columns: repeat(4, minmax(200px, 255px));
+            grid-template-columns: repeat(4, minmax(150px, 255px));
         }
     }
 
@@ -16,6 +16,9 @@
         padding: 25px;
         background-color: #fff;
         border-radius: 10px;
+        @media (max-width: $md2) {
+            // padding: 10px;
+        }
     }
 }
 .item-article {
@@ -32,6 +35,9 @@
         margin-bottom: 10px;
         max-height: 65px;
         overflow: auto;
+        @media (max-width: $md2) {
+            max-height: 100px;
+        }
     }
 
     &__date {
@@ -46,6 +52,9 @@
         grid-column: span 2;
         grid-row: span 2;
         padding: 25px 0 25px 25px;
+        @media (max-width: $md1) {
+            padding: 15px 0 15px 15px;
+        }
     }
     &_span21 {
         grid-row: span 2;
@@ -59,6 +68,11 @@
         padding: 0;
         background-color: #6e99ae;
         color: #fff;
+    }
+    &_tiny {
+        @media (max-width: $md2) {
+            padding: 10px;
+        }
     }
 }
 // item-article main
@@ -165,6 +179,9 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        @media (max-width: $md1) {
+            padding: 10px;
+        }
     }
     &__labels {
         position: absolute;
@@ -202,6 +219,9 @@
 .bottom-span21 {
     &__img {
         margin-right: 10px;
+        @media (max-width: $md2) {
+            margin-right: 5px;
+        }
     }
     &__headline {
         color: #fff;
@@ -215,6 +235,9 @@
             @include response-font(12, 8);
             line-height: 15/12 * 100%;
             margin-right: 10px;
+            @media (max-width: $md2) {
+                margin-right: 5px;
+            }
         }
     }
 }
@@ -235,6 +258,10 @@
         font-family: $thirdFont;
         max-height: 75px;
         overflow: auto;
+        @media (max-width: $md2) {
+            min-height: 100px;
+            padding: 5px 0;
+        }
     }
 }
 
@@ -253,6 +280,9 @@
 
     &__column {
         padding: 0 25px 0 35px;
+        @media (max-width: $md2) {
+            padding: 0 15px;
+        }
     }
 
     &__row {
