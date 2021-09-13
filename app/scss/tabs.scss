@@ -1,5 +1,8 @@
 .section {
     margin: 50px 0;
+    @media (max-width: $md4) {
+        margin: 25px 0;
+    }
     &__container {
         @media (max-width: $md4) {
             padding: 0 10px;

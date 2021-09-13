@@ -1,5 +1,8 @@
 .articles {
     margin-bottom: 30px;
+    @media (max-width: $md4) {
+        margin-bottom: 15px;
+    }
     &__container {
         display: -ms-grid;
         display: grid;
@@ -9,6 +12,18 @@
         @media (max-width: $md1) {
             gap: 20px;
             grid-template-columns: repeat(4, minmax(150px, 255px));
+        }
+        @media (max-width: $md3) {
+            grid-template-rows: repeat(3, 170px);
+            grid-template-columns: repeat(3, minmax(150px, 1fr));
+        }
+        @media (max-width: 600px) {
+            grid-template-columns: repeat(2, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        @media (max-width: $md5) {
+            gap: 10px;
+            grid-template-columns: minmax(150px, 1fr);
         }
     }
 
@@ -27,16 +42,24 @@
         line-height: 25/16 * 100%;
         margin-bottom: 5px;
         font-family: $thirdFont;
+        max-height: 40px;
+        overflow: auto;
     }
 
     &__text {
         @include response-font(14, 10);
         line-height: 20/14 * 100%;
         margin-bottom: 10px;
-        max-height: 65px;
+        max-height: 60%;
         overflow: auto;
+        @media (max-width: $md1) {
+            max-height: 65%;
+        }
         @media (max-width: $md2) {
-            max-height: 100px;
+            max-height: 60%;
+        }
+        @media (max-width: 600px) {
+            max-height: 82%;
         }
     }
 
@@ -55,6 +78,9 @@
         @media (max-width: $md1) {
             padding: 15px 0 15px 15px;
         }
+        @media (max-width: $md5) {
+            grid-row: span 1;
+        }
     }
     &_span21 {
         grid-row: span 2;
@@ -68,6 +94,9 @@
         padding: 0;
         background-color: #6e99ae;
         color: #fff;
+        @media (max-width: $md3) {
+            display: none;
+        }
     }
     &_tiny {
         @media (max-width: $md2) {
@@ -96,10 +125,22 @@
 .main-art {
     &__column:not(:last-child) {
         flex: 0 0 45%;
+        @media (max-width: $md5) {
+            flex: 0 0 100%;
+        }
+    }
+
+    &__column:last-child {
+        @media (max-width: $md5) {
+            display: none;
+        }
     }
 
     &__labels {
         margin-bottom: 20px;
+        @media (max-width: $md5) {
+            margin-bottom: 10px;
+        }
     }
 
     &__label {
@@ -111,9 +152,13 @@
         @include response-font(25, 14);
         line-height: 30/25 * 100%;
         margin-bottom: 25px;
-        max-height: 100px;
+        max-height: 150px;
         height: auto;
         overflow: auto;
+        @media (max-width: $md3) {
+            max-height: 110px;
+            margin-bottom: 15px;
+        }
     }
 
     &__text {
@@ -256,11 +301,14 @@
         @include response-font(14, 11);
         line-height: 25/14 * 100%;
         font-family: $thirdFont;
-        max-height: 75px;
+        max-height: 65px;
         overflow: auto;
         @media (max-width: $md2) {
-            min-height: 100px;
-            padding: 5px 0;
+            max-height: 100px;
+            padding: 5px;
+        }
+        @media (max-width: $md3) {
+            max-height: 160px;
         }
     }
 }
@@ -299,7 +347,7 @@
         @include response-font(20, 16);
         line-height: 25/20 * 100%;
         margin-bottom: 15px;
-        max-height: 80px;
+        max-height: 60px;
         overflow: auto;
     }
 
@@ -311,13 +359,11 @@
     }
 
     &__bottom {
+        text-align: center;
         border-top: 1px solid #b4d1e0;
-        padding: 14px 95px;
+        padding: 14px 20px;
         @include response-font(14, 10);
         line-height: 20/14 * 100%;
-        @media (max-width: $md1) {
-            padding: 20px;
-        }
     }
 }
 .author-aside {
