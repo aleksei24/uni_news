@@ -106,7 +106,7 @@
         max-height: 180px;
         overflow: auto;
         h2 {
-            @include response-font(40, 32);
+            @include response-font(40, 28);
             line-height: 50/40 * 100%;
         }
     }
@@ -146,7 +146,7 @@
 
     &__headline {
         margin-bottom: 15px;
-        @include response-font(25, 18);
+        @include response-font(25, 14);
         line-height: 30/25 * 100%;
         font-family: $thirdFont;
         height: 100%;
@@ -161,7 +161,7 @@
         @include response-font(14, 10);
         line-height: 20/14 * 100%;
         height: 100%;
-        max-height: 94px;
+        max-height: 100px;
         overflow: auto;
     }
 
