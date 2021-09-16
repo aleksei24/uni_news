@@ -138,7 +138,7 @@
     }
 
     &__context {
-        margin-bottom: 25px;
+        margin-bottom: 20px;
         @media (max-width: $md2) {
             margin-bottom: 15px;
         }
@@ -146,12 +146,12 @@
 
     &__headline {
         margin-bottom: 15px;
-        @include response-font(25, 14);
+        @include response-font(25, 16);
         line-height: 30/25 * 100%;
         font-family: $thirdFont;
         height: 100%;
-        max-height: 115px;
-        overflow: auto;
+        max-height: 140px;
+        overflow: hidden;
         @media (max-width: $md2) {
             margin-bottom: 10px;
         }
