@@ -1,3 +1,4 @@
+@use 'sass:math';
 .footer {
     background-color: $bgColourFooter;
     &__container {
@@ -40,7 +41,7 @@
     &__title {
         font-family: $secondFont;
         @include response-font(14, 11);
-        line-height: 20/14 * 100%;
+        line-height: math.div(20, 14) * 100%;
         font-weight: 700;
     }
 
@@ -60,7 +61,7 @@
 
     &__link {
         @include response-font(14, 10);
-        line-height: 20/14 * 100%;
+        line-height: math.div(20, 14) * 100%;
     }
 }
 
@@ -100,7 +101,7 @@
         text-transform: uppercase;
         font-weight: 700;
         @include response-font(14, 9);
-        line-height: 20/14 * 100%;
+        line-height: math.div(20, 14) * 100%;
         &:first-child {
             @media (max-width: $md4) {
                 display: none;
@@ -151,13 +152,13 @@
         overflow: auto;
         color: $dateColour;
         @include response-font(14, 7);
-        line-height: 20/14 * 100%;
+        line-height: math.div(20, 14) * 100%;
     }
 
     &__copy {
         color: $dateColour;
         @include response-font(14, 7);
-        line-height: 20/14 * 100%;
+        line-height: math.div(20, 14) * 100%;
         white-space: nowrap;
         margin-left: 20px;
     }

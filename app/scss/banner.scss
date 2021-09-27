@@ -1,3 +1,4 @@
+@use 'sass:math';
 .banner {
     background-color: $bannerBg;
     border-radius: 10px;
@@ -32,7 +33,7 @@
 .card-banner {
     &__headline {
         @include response-font(16, 12);
-        line-height: 25/16 * 100%;
+        line-height: math.div(25, 16) * 100%;
         color: $bannerHeadline;
         font-family: $thirdFont;
         width: 154px;

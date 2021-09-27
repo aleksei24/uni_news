@@ -1,3 +1,4 @@
+@use 'sass:math';
 .section {
     margin: 50px 0;
     @media (max-width: $md4) {
@@ -133,7 +134,7 @@
         height: 60px;
         padding: 20px 25px;
         @include response-font(14, 10);
-        line-height: 20/14 * 100%;
+        line-height: math.div(20, 14) * 100%;
         text-transform: uppercase;
         @media (max-width: $md2) {
             padding: 15px 20px;
@@ -185,12 +186,12 @@
         h4 {
             font-weight: 400;
             @include response-font(14, 10);
-            line-height: 20/14 * 100%;
+            line-height: math.div(20, 14) * 100%;
             color: #fff;
         }
         p {
             @include response-font(12, 9);
-            line-height: 15/12 * 100%;
+            line-height: math.div(15, 12) * 100%;
             color: rgba(255, 255, 255, 0.4);
         }
     }
@@ -203,7 +204,7 @@
         h4 {
             font-weight: 400;
             @include response-font(12, 10);
-            line-height: 15/12 * 100%;
+            line-height: math.div(15, 12) * 100%;
             text-transform: uppercase;
             margin-bottom: 25px;
         }
@@ -211,7 +212,7 @@
             width: 600px;
             height: auto;
             @include response-font(40, 21);
-            line-height: 50/40 * 100%;
+            line-height: math.div(50, 40) * 100%;
             color: #fff;
             margin-bottom: 45px;
             font-family: $thirdFont;
@@ -228,7 +229,7 @@
 }
 .btn {
     @include response-font(14, 12);
-    line-height: 20/14 * 100%;
+    line-height: math.div(20, 14) * 100%;
     color: #fff;
     font-family: $secondFont;
 }

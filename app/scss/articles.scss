@@ -1,3 +1,4 @@
+@use 'sass:math';
 .articles {
     margin-bottom: 30px;
     @media (max-width: $md4) {
@@ -39,7 +40,7 @@
 .item-article {
     &__headliine {
         @include response-font(16, 12);
-        line-height: 25/16 * 100%;
+        line-height: math.div(25, 16) * 100%;
         margin-bottom: 5px;
         font-family: $thirdFont;
         max-height: 40px;
@@ -48,7 +49,7 @@
 
     &__text {
         @include response-font(14, 10);
-        line-height: 20/14 * 100%;
+        line-height: math.div(20, 14) * 100%;
         margin-bottom: 10px;
         max-height: 60%;
         overflow: auto;
@@ -65,7 +66,7 @@
 
     &__date {
         @include response-font(12, 8);
-        line-height: 15/12 * 100%;
+        line-height: math.div(15, 12) * 100%;
         span {
             color: #939699;
         }
@@ -145,12 +146,12 @@
 
     &__label {
         @include response-font(12, 8);
-        line-height: 15/12 * 100%;
+        line-height: math.div(15, 12) * 100%;
     }
 
     &__headliine {
         @include response-font(25, 14);
-        line-height: 30/25 * 100%;
+        line-height: math.div(30, 25) * 100%;
         margin-bottom: 25px;
         max-height: 150px;
         height: auto;
@@ -163,7 +164,7 @@
 
     &__text {
         @include response-font(14, 11);
-        line-height: 20/14 * 100%;
+        line-height: math.div(20, 14) * 100%;
         max-height: 120px;
         height: 100%;
         overflow: auto;
@@ -185,7 +186,7 @@
 
     &__quote {
         @include response-font(14, 10);
-        line-height: 20/14 * 100%;
+        line-height: math.div(20, 14) * 100%;
         span {
             font-family: $thirdFont;
         }
@@ -194,7 +195,7 @@
     &__comments {
         margin-left: 5px;
         @include response-font(12, 8);
-        line-height: 15/12 * 100%;
+        line-height: math.div(15, 12) * 100%;
     }
 }
 .icon-comment::before {
@@ -237,7 +238,7 @@
         background-color: #3dc47e;
         color: white;
         @include response-font(12, 8);
-        line-height: 15/12 * 100%;
+        line-height: math.div(15, 12) * 100%;
         padding: 5px 11px;
         margin-bottom: 10px;
         border-radius: 3px;
@@ -247,13 +248,13 @@
     &__span {
         color: #e7d9ff;
         @include response-font(12, 8);
-        line-height: 15/12 * 100%;
+        line-height: math.div(15, 12) * 100%;
     }
     &__headline {
         color: #fff;
         text-transform: uppercase;
         @include response-font(16, 12);
-        line-height: 25/16 * 100%;
+        line-height: math.div(25, 16) * 100%;
         margin: 10px 0 15px;
     }
     &__bottom {
@@ -271,14 +272,14 @@
     &__headline {
         color: #fff;
         @include response-font(14, 10);
-        line-height: 20/14 * 100%;
+        line-height: math.div(20, 14) * 100%;
         font-weight: 400;
     }
     &__signs {
         span {
             color: rgba(255, 255, 255, 0.4);
             @include response-font(12, 8);
-            line-height: 15/12 * 100%;
+            line-height: math.div(15, 12) * 100%;
             margin-right: 10px;
             @media (max-width: $md2) {
                 margin-right: 5px;
@@ -299,7 +300,7 @@
     &__descript {
         padding: 7px 25px;
         @include response-font(14, 11);
-        line-height: 25/14 * 100%;
+        line-height: math.div(25, 14) * 100%;
         font-family: $thirdFont;
         max-height: 80px;
         overflow: auto;
@@ -318,7 +319,7 @@
     &__top {
         padding: 0 25px 20px 25px;
         @include response-font(14, 10);
-        line-height: 20/14 * 100%;
+        line-height: math.div(20, 14) * 100%;
         font-weight: 400;
         text-transform: uppercase;
         border-bottom: 1px solid #b4d1e0;
@@ -345,7 +346,7 @@
 
     &__title {
         @include response-font(20, 16);
-        line-height: 25/20 * 100%;
+        line-height: math.div(25, 20) * 100%;
         margin-bottom: 15px;
         max-height: 80px;
         overflow: auto;
@@ -363,7 +364,7 @@
         border-top: 1px solid #b4d1e0;
         padding: 14px 20px;
         @include response-font(14, 10);
-        line-height: 20/14 * 100%;
+        line-height: math.div(20, 14) * 100%;
     }
 }
 .author-aside {
@@ -375,11 +376,11 @@
         color: #d1e2eb;
         p {
             @include response-font(14, 10);
-            line-height: 20/14 * 100%;
+            line-height: math.div(20, 14) * 100%;
         }
         span {
             @include response-font(12, 8);
-            line-height: 15/12 * 100%;
+            line-height: math.div(15, 12) * 100%;
         }
     }
 }

@@ -1,3 +1,4 @@
+@use 'sass:math';
 .subscribe {
     margin: 0 auto;
     padding: 60px 0;
@@ -9,7 +10,7 @@
 
     &__title {
         @include response-font(40, 32);
-        line-height: 50/40 * 100%;
+        line-height: math.div(50, 40) * 100%;
         font-family: $thirdFont;
         margin-bottom: 25px;
         text-align: center;
@@ -42,7 +43,7 @@
         border-radius: 5px;
         width: 315px;
         @include response-font(14, 10);
-        line-height: 20/14 * 100%;
+        line-height: math.div(20, 14) * 100%;
         margin-right: 10px;
         @media (max-width: $md4) {
             margin-right: 0;
@@ -67,7 +68,7 @@
         min-height: 40px;
         border-radius: 20px;
         @include response-font(14, 10);
-        line-height: 20/14 * 100%;
+        line-height: math.div(20, 14) * 100%;
         cursor: pointer;
         transition: background-color 0.2s ease;
         @media (max-width: $md4) {

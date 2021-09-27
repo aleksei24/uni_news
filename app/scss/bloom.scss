@@ -1,3 +1,4 @@
+@use 'sass:math';
 .bloom {
     margin: 60px 0;
     background-image: url(../img/bloom/bg-bloom.jpg);
@@ -26,7 +27,7 @@
     }
     &__headline {
         @include response-font(40, 24);
-        line-height: 50/40 * 100%;
+        line-height: math.div(50, 40) * 100%;
         color: $bannerHeadline;
         text-align: center;
     }

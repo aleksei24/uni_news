@@ -1,3 +1,4 @@
+@use 'sass:math';
 .column-of-articles {
     margin-bottom: 30px;
     &__container {
@@ -68,7 +69,7 @@
 
     &__label {
         @include response-font(12, 8);
-        line-height: 15/12 * 100%;
+        line-height: math.div(15, 12) * 100%;
     }
 
     &__main {
@@ -79,7 +80,7 @@
 
         h3 {
             @include response-font(20, 14);
-            line-height: 25/20 * 100%;
+            line-height: math.div(25, 20) * 100%;
             font-family: $thirdFont;
             margin-bottom: 10px;
             max-height: 60px;
@@ -87,7 +88,7 @@
         }
         p {
             @include response-font(14, 10);
-            line-height: 20/14 * 100%;
+            line-height: math.div(20, 14) * 100%;
             max-height: 75px;
             overflow: auto;
             @media (max-width: 600px) {
@@ -111,17 +112,17 @@
 .bottom-colArt {
     &__date {
         @include response-font(12, 8);
-        line-height: 15/12 * 100%;
+        line-height: math.div(15, 12) * 100%;
     }
 
     &__comments {
         @include response-font(12, 8);
-        line-height: 15/12 * 100%;
+        line-height: math.div(15, 12) * 100%;
     }
 
     &__likes {
         @include response-font(12, 8);
-        line-height: 15/12 * 100%;
+        line-height: math.div(15, 12) * 100%;
     }
 }
 .icon-comment::before {
@@ -139,7 +140,7 @@
         border-bottom: 1px solid #d9dadb;
         h4 {
             @include response-font(14, 10);
-            line-height: 20/14 * 100%;
+            line-height: math.div(20, 14) * 100%;
             text-transform: uppercase;
             text-align: center;
         }
@@ -168,7 +169,7 @@
     &__text {
         p {
             @include response-font(14, 10);
-            line-height: 20/14 * 100%;
+            line-height: math.div(20, 14) * 100%;
             margin-bottom: 1px;
             color: #4b5157;
             max-height: 46px;
@@ -176,7 +177,7 @@
         }
         span {
             @include response-font(12, 8);
-            line-height: 15/12 * 100%;
+            line-height: math.div(15, 12) * 100%;
             color: #939699;
         }
     }
@@ -189,7 +190,7 @@
         border-top: 1px solid #d9dadb;
         h5 {
             @include response-font(14, 10);
-            line-height: 20/14 * 100%;
+            line-height: math.div(20, 14) * 100%;
             text-align: center;
             color: #262d33;
         }
