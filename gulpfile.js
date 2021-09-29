@@ -144,7 +144,7 @@ gulp.task('otf2ttf', function () {
         .pipe(dest(sourceFolder + '/fonts/'));
 });
 
-function fontsStyle(params) {
+async function fontsStyle() {
     let file_content = fs.readFileSync(sourceFolder + '/scss/fonts.scss');
     if (file_content == '') {
         fs.writeFile(sourceFolder + '/scss/fonts.scss', '', cb);
